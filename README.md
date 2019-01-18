@@ -9,5 +9,6 @@ The SoundCast SSP supports JSON and Compressed JSON (gzip) as data formats for b
 ## Bid Request Format
 As stated before we are fully compatible with the OpenRTB 2.5 Format. 
 
-
+## Any Questions
+Please contact our support team.
 
