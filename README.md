@@ -1,4 +1,4 @@
-# SoundCast-SSP-Documentation
+# SoundCast SSP Documentation
 SoundCast Supply Side Documentation
 
 This guide covers the latest version of the SoundCast Supplier Protocol. It is based on the latest OpenRTB 2.5, and helps to integrate with the SoundCast SSP.
