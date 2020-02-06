@@ -33,7 +33,7 @@ This is the top level object that is sent to the Buyer. Each bid request sent fr
 | device | object | 	Device object with details about the device to which the impression will be delivered, for more information, see the [Device Object](#device-object) section. |
 | user | object | User Object which describes the user, for more information, see the [User Object](#user-object) section. |
 | source | object | Indicates the entity responsible for the final impression sale decision, for more information, see the [Source Object](#source-object). |
-| ext | object | Ext Object used for Supplier specific properties, for more information, see the [Ext Object](#ext-object) section. |
+| ext | object | ext is an json object used to extend the data |
 | imp | array of objects | Array of objects representing the impressions offered, for more information, see the [Impression Object](#impression-object) section. |
 | site | object | The Site Object describing the site, for more information, see the [Site Object](#site-object) section.  |
 
@@ -86,19 +86,6 @@ This is the top level object that is sent to the Buyer. Each bid request sent fr
 | Key | Type | Description |
 | --- | ---- | ----------- |
 | fd | integer | Indicates the entity responsible for the final impression sale decision |
-
-
-#### Ext Object
-
-
-| Key | Type | Description |
-| --- | ---- | ----------- |
-| ads_txt.status | integer | Indicates what information the ads.txt file contained regarding this Suppliers selling relationship with the publisher |
-| ads_txt.auth_id | string | Passes the TAG ID if present in the ads.txt file |
-| ads_txt.pub_id | string | Publisher ID |
-| is_secure | integer | 0 for non-secure pages; 1 for secure pages. |
-| ssp | string | The Supplier identification string |
-| media_src | string | The Supplier identification string |
 
 
 #### Impression object
