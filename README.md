@@ -20,7 +20,7 @@ Bid request model for OpenRTB Protocol 2.5 is shown below.
 
 ### Bid Object
 
-This is the top level object that is sent to the Buyer. Each bid request sent from BLIINK to a Buyer will contain the following fields.
+This is the top level object that is sent to the Buyer. Each bid request sent from SoundCast to a Buyer will contain the following fields.
 
 | Key | Type | Description |
 | --- | ---- | ----------- |
