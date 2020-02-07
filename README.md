@@ -101,12 +101,114 @@ This is the top level object that is sent to the Buyer. Each bid request sent fr
 | displaymanager | string | Name of the ad mediation partner, SDK technology. |
 | displaymanagerver | string | Version of the ad mediation partner, SDK technology. |
 | tagid | integer | Identifier for specific ad placement or ad tag that was used to initiate the auction. |
-| banner | object | The Banner Object, for more information, see the [Banner Object](#banner-object) section. |
-| pmp | object | The Banner Object, for more information, see the [PrivateMarket Object](#privatemarket-object) section. |
+| audio | object | An [Audio Object](#audio-object) |
+| pmp | object |  |
 | secure | integer | Specifies if the page is SSL compliant. |
 
 
-##### Banner Object
+##### Audio Object
+
+
+| Key | Type | Description |
+| --- | ---- | ----------- |
+| mimes | string array | Array of content MIME types supported (e.g., “audio/mp4”) |
+| minduration | integer | Minimum audio ad duration in seconds. |
+| maxduration | integer | Maximum audio ad duration in seconds. |
+| startdelay | integer | Indicates the start delay in seconds for pre-roll, mid-roll, or post-roll ad placements. see the [Start Delay Values](#start-delay-values) section. |
+| sequence | integer | If multiple ad impressions are offered in the same bid request, the sequence number will allow for the coordinated delivery of multiple creatives. |
+| battr | integer array | Blocked creative attributes. see the [Battr Values](#battr-values) |
+| maxextended | integer | Maximum extended ad duration if extension is allowed. If blank or 0, extension is not allowed. If -1, extension is allowed, and there is no time limit imposed. If greater than 0, then the value represents the number of seconds of extended play supported beyond the maxduration value. |
+| minbitrate | integer | Minimum bit rate in Kbps. |
+| maxbitrate | integer | Maximum bit rate in Kbps. |
+| delivery | integer array | Supported delivery methods (e.g., streaming, progressive). If none specified, assume all are supported. See [Content Delivery Methods](#content-delivery-methods-values) |
+| companionad | object array | Array of [Banner Object](#banner-object) if companion ads are available.|
+| companiontype | integer array | Supported DAAST companion ad types (see [Companion Types Values](#companion-types-values)). Recommended if companion [Banner Object](#banner-object) are included via the companionad array.|
+| maxseq | integer | The maximum number of ads that can be played in an ad pod. |
+| nvol | integer | Volume normalization mode. Refer to List [Volume Normalization Modes Values](#volume-normalization-modes-values) |
+| stitched | integer | Indicates if the ad is stitched with audio content or delivered independently, where 0 = no, 1 = yes. |
+| ext | object | Placeholder for exchange-specific extensions to OpenRTB.
+| feed | integer | Type of audio feed. See [Feed Types Values](#feed-types-values) |
+
+###### Start Delay Values
+
+
+| Value | Description |
+| ----- | ----------- |
+| > 0 | Mid-Roll (value indicates start delay in second) |
+| 0 | Pre-Roll |
+| -1 | Generic Mid-Roll |
+| -2 | Generic Post-Roll |
+
+###### Battr Values
+
+
+| Value | Description |
+| ----- | ----------- |
+| 1 | Audio Ad (Auto-Play) |
+| 2 | Audio Ad (User Initiated) |
+| 3 | Expandable (Automatic) |
+| 4 | Expandable (User Initiated - Click) |
+| 5 | Expandable (User Initiated - Rollover) |
+| 6 | In-Banner Video Ad (Auto-Play) |
+| 7 | In-Banner Video Ad (User Initiated) |
+| 8 | Pop (e.g., Over, Under, or Upon Exit) |
+| 9 | Provocative or Suggestive Imagery |
+| 10 | Shaky, Flashing, Flickering, Extreme Animation, Smileys |
+| 11 | Surveys |
+| 12 | Text Only |
+| 13 | User Interactive (e.g., Embedded Games) |
+| 14 | Windows Dialog or Alert Style |
+| 15 | Has Audio On/Off Button |
+| 16 | Ad Provides Skip Button (e.g. VPAID-rendered skip button on pre-roll video) |
+| 17 Adobe Flash |
+
+###### Delivery Values
+
+
+| Value | Description |
+| ----- | ----------- |
+| 1 | Streaming |
+| 2 | Progressive |
+| 3 | Download |
+
+###### Companion Types Values
+
+
+| Value | Description |
+| ----- | ----------- |
+| 1 | Static Resource |
+| 2 | HTML Resource |
+| 3 | iframe Resource |
+
+###### Content Delivery Methods Values
+
+
+| Value | Description |
+| ----- | ----------- |
+| 1 | Streaming |
+| 2 | Progressive |
+| 3 Download |
+
+######  Volume Normalization Modes Values
+
+
+| Value | Description |
+| 0 | None |
+| 1 | Ad Volume Average Normalized to Content |
+| 2 | Ad Volume Peak Normalized to Content |
+| 3 | Ad Loudness Normalized to Content |
+| 4 | Custom Volume Normalization |
+
+###### Feed Types Values
+
+
+| Value | Description |
+| ----- | ----------- |
+| 1 | Music Service |
+| 2 | FM/AM Broadcast |
+| 3 | Podcast |
+
+##### Banner Object (companion Ads only)
 
 
 | Key | Type | Description |
@@ -121,15 +223,13 @@ This is the top level object that is sent to the Buyer. Each bid request sent fr
 | w | integer | Width of the impression in pixels. |
 | format | array of objects | Array of objects denoting the alternative sizes that may be used for bidding, for more information, see the [BannerFormat Object](#bannerformat-object) section. |
 
-
-###### BannerFormat Object
+###### BannerFormat Object (companion Ads only)
 
 
 | Key | Type | Description |
 | --- | ---- | ----------- |
 | h | integer | Height of the impression in pixels. |
 | w | integer | Width of the impression in pixels. |
-
 
 ##### PrivateMarket Object
 
