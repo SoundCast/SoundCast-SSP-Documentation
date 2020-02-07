@@ -102,7 +102,7 @@ This is the top level object that is sent to the Buyer. Each bid request sent fr
 | displaymanagerver | string | Version of the ad mediation partner, SDK technology. |
 | tagid | integer | Identifier for specific ad placement or ad tag that was used to initiate the auction. |
 | audio | object | An [Audio Object](#audio-object) |
-| pmp | object |  |
+| pmp | object | An [PrivateMarket Object](#privatemarket-object) |
 | secure | integer | Specifies if the page is SSL compliant. |
 
 
