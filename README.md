@@ -76,7 +76,7 @@ This is the top level object that is sent to the Buyer. Each bid request sent fr
 
 | Key | Type | Description |
 | --- | ---- | ----------- |
-| id | string | Unique BLIINK ID of this user |
+| id | string | Unique SoundCast ID of this user |
 | consent | string | The binary encoding scheme that is passed in base64 URL/web safe format known as daisybit. |
 
 
