@@ -193,6 +193,7 @@ This is the top level object that is sent to the Buyer. Each bid request sent fr
 
 
 | Value | Description |
+| ----- | ----------- |
 | 0 | None |
 | 1 | Ad Volume Average Normalized to Content |
 | 2 | Ad Volume Peak Normalized to Content |
