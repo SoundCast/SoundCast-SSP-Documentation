@@ -405,7 +405,7 @@ This is the top level object that is sent to the Buyer. Each bid request sent fr
     }
   },
   "at": 1,
-  "tmax": 100,
+  "tmax": 900,
   "wseat": [
     "1"
   ],
