@@ -121,7 +121,7 @@ This is the top level object that is sent to the Buyer. Each bid request sent fr
 | minbitrate | integer | Minimum bit rate in Kbps. |
 | maxbitrate | integer | Maximum bit rate in Kbps. |
 | delivery | integer array | Supported delivery methods (e.g., streaming, progressive). If none specified, assume all are supported. See [Content Delivery Methods](#content-delivery-methods-values) |
-| companionad | object array | Array of [Banner Object](#banner-object) if companion ads are available.|
+| companionad | object array | Array of [Banner Object](#banner-object) when companionad will be available.|
 | companiontype | integer array | Supported DAAST companion ad types (see [Companion Types Values](#companion-types-values)). Recommended if companion [Banner Object](#banner-object) are included via the companionad array.|
 | maxseq | integer | The maximum number of ads that can be played in an ad pod. |
 | nvol | integer | Volume normalization mode. Refer to List [Volume Normalization Modes Values](#volume-normalization-modes-values) |
@@ -305,52 +305,12 @@ This is the top level object that is sent to the Buyer. Each bid request sent fr
         ],
         "minbitrate": 128,
         "maxbitrate": 320,
-        "companionad": [
-          {
-            "format": [
-              {}
-            ],
-            "id": "01E33AQJHGTFDP8SBNDQ5QZ05G",
-            "btype": [
-              3,
-              4
-            ],
-            "battr": [
-              3,
-              4,
-              5,
-              8,
-              9,
-              14,
-              17
-            ],
-            "mimes": [
-              "text/html",
-              "image/gif",
-              "image/jpg",
-              "application/javascript"
-            ],
-            "api": [
-              3,
-              5,
-              4,
-              1,
-              2
-            ],
-            "ext": {
-              "extra_sizes": []
-            }
-          }
-        ],
         "api": [
           3,
           5,
           4,
           1,
           2
-        ],
-        "companiontype": [
-          1
         ],
         "feed": 3,
         "nvol": 3
