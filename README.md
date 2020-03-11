@@ -279,179 +279,203 @@ This is the top level object that is sent to the Buyer. Each bid request sent fr
 
 ```
 {
-   "id":"309195a0-1f21-11e9-9049-51b6556831b6",
-   "allimps":0,
-   "tmax":120,
-   "cur":[
-      "EUR"
-   ],
-   "bcat":[
-      "IAB26",
-      "IAB25",
-      "IAB24",
-      "IAB23",
-      "IAB23",
-      "IAB14-3"
-   ],
-   "at":2,
-   "device":{
-      "js":1,
-      "ip":"62.23.198.190",
-      "geo":{
-         "type":2,
-         "lat":48.8846,
-         "lon":2.2697,
-         "region":"ID",
-         "country":"FR",
-         "city":"Neuilly-sur-Seine",
-         "utcoffset":60
+  "id": "01E33AQJHG814RSJX1ZGMEBW3P",
+  "imp": [
+    {
+      "id": "01E33AQJHGTFDP8SBNDQ5QZ05G",
+      "audio": {
+        "mimes": [
+          "audio/mpeg",
+          "audio/mp3",
+          "audio/mpeg3",
+          "audio/x-mpeg-3"
+        ],
+        "minduration": 10,
+        "maxduration": 30,
+        "protocols": [
+          2,
+          9,
+          10
+        ],
+        "startdelay": 1,
+        "sequence": 1,
+        "battr": [
+          1,
+          2
+        ],
+        "minbitrate": 128,
+        "maxbitrate": 320,
+        "companionad": [
+          {
+            "format": [
+              {}
+            ],
+            "id": "01E33AQJHGTFDP8SBNDQ5QZ05G",
+            "btype": [
+              3,
+              4
+            ],
+            "battr": [
+              3,
+              4,
+              5,
+              8,
+              9,
+              14,
+              17
+            ],
+            "mimes": [
+              "text/html",
+              "image/gif",
+              "image/jpg",
+              "application/javascript"
+            ],
+            "api": [
+              3,
+              5,
+              4,
+              1,
+              2
+            ],
+            "ext": {
+              "extra_sizes": []
+            }
+          }
+        ],
+        "api": [
+          3,
+          5,
+          4,
+          1,
+          2
+        ],
+        "companiontype": [
+          1
+        ],
+        "feed": 3,
+        "nvol": 3
       },
-      "ua":"PostmanRuntime/7.6.0",
-      "osv":"0.0.0",
-      "devicetype":2,
-      "w":"1024",
-      "h":"2123",
-      "pxratio":1.2,
-      "ipv6":"fe80:0:0:0:200:f8ff:fe21:67cf"
-   },
-   "user":{
-      "id":"035911ea467d4056"
-   },
-   "source":{
-      "fd":1
-   },
-   "ext":{
-      "ads_txt":{
-         "status":1,
-         "auth_id":"",
-         "pub_id":""
+      "pmp": {
+        "deals": [
+          {
+            "id": "5e3ac0d83a6d0",
+            "bidfloor": 1,
+            "bidfloorcur": "EUR",
+            "at": 1,
+            "ext": {
+              "data_src": "Soundcast SSP",
+              "Soundcast": null
+            }
+          }
+        ]
       },
-      "ssp":"SOUNDCAST",
-      "media_src":"SOUNDCAST"
-   },
-   "imp":[
-      {
-         "bidfloor":8,
-         "bidfloorcur":"EUR",
-         "instl":0,
-         "exp":120,
-         "displaymanager":"SOUNDCAST",
-         "displaymanagerver":"SOUNDCAST",
-         "id":"3091bcb0-1f21-11e9-9049-51b6556831b6",
-         "tagid":1,
-         "audio":{
-            "mimes":[
-               "audio/mpeg"
-            ],
-            "startdelay":1,
-            "maxseq":1,
-            "sequence":1,
-            "feed":3,
-            "battr":[
-               1,
-               2
-            ],
-            "nvol":3,
-            "minbitrate":32,
-            "maxbitrate":320,
-            "maxextended":0,
-            "delivery":[
-               1
-            ],
-            "companiontype":[
-               null
-            ],
-            "companionad":[
-               {
-                  "topframe":0,
-                  "battr":[
-                     3,
-                     4,
-                     5,
-                     8,
-                     9,
-                     14,
-                     17
-                  ],
-                  "btype":[
-                     3,
-                     4
-                  ],
-                  "pos":0,
-                  "mimes":[
-                     "text/html",
-                     "image/gif",
-                     "image/jpg",
-                     "application/javascript"
-                  ],
-                  "id":"3091bcb1-1f21-11e9-9049-51b6556831b6",
-                  "h":300,
-                  "w":500,
-                  "format":[
-                     {
-                        "h":300,
-                        "w":500
-                     },
-                     {
-                        "h":100,
-                        "w":500
-                     }
-                  ],
-                  "ext":{
-                     "extra_sizes":[
-                        {
-                           "h":31,
-                           "w":300
-                        },
-                        {
-                           "h":30,
-                           "w":292
-                        },
-                        {
-                           "h":50,
-                           "w":300
-                        },
-                        {
-                           "h":60,
-                           "w":468
-                        }
-                     ]
-                  }
-               }
-            ]
-         },
-         "pmp":{
-            "deals":[
-               {
-                  "bidfloorcur":"EUR",
-                  "bidfloor":23,
-                  "at":2,
-                  "ext":{
-
-                  }
-               },
-               {
-                  "bidfloorcur":"EUR",
-                  "bidfloor":23,
-                  "at":2,
-                  "ext":{
-
-                  }
-               }
-            ],
-            "private_auction":1
-         }
-      }
-   ],
-   "site":{
-      "publisher":{
-         "id":"5c3df0e009c24",
-         "name":"Test site1"
-      },
-      "id":"5c3df0e0044ff",
-      "name":"Test network"
-   }
+      "displaymanager": "Soundcast SSP",
+      "displaymanagerver": "1.0",
+      "tagid": "5c505f593adaa",
+      "secure": 1,
+      "exp": 120
+    }
+  ],
+  "site": {
+    "id": "5c505f0ea5ceb",
+    "name": "Auto Moto ",
+    "domain": "www.automoto.com",
+    "cat": [
+      "1"
+    ],
+    "sectioncat": [
+      "1"
+    ],
+    "pagecat": [
+      "1"
+    ],
+    "publisher": {
+      "id": "5e3301babefba-5c505f0ea5ceb",
+      "name": "Auto Moto ",
+      "cat": [
+        "1"
+      ],
+      "domain": "www.automoto.com"
+    },
+    "content": {
+      "id": "01E33AQJHG3TBZE5GSF7DPR2N9",
+      "title": "Podcast - Auto-Moto",
+      "url": "www.automoto.com",
+      "cat": [
+        "1"
+      ],
+      "language": "fr"
+    },
+    "keywords": "95, Arabie Saoudite, brent, carburant, gazole, moyenne, opep, pompe, prix de l'essence, russie, sans-plomb",
+    "mobile": 1
+  },
+  "device": {
+    "ua": "Mozilla/5.0 (Linux; Android 7.0; Q8S55IN4G2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.112 Mobile Safari/537.36",
+    "geo": {
+      "lat": 43.3242,
+      "lon": 2.7375,
+      "type": 2,
+      "accuracy": 20,
+      "country": "FRA",
+      "region": "OCC",
+      "metro": "0",
+      "city": "Azillanet",
+      "utcoffset": 3600
+    },
+    "ip": "xxx.xxx.xxx.xxx",
+    "devicetype": 4,
+    "os": "Android 7.0",
+    "osv": "7.0"
+  },
+  "user": {
+    "id": "01E33AQJHG3TBZE5GSF7DPR2N9",
+    "geo": {
+      "lat": 43.3242,
+      "lon": 2.7375,
+      "type": 2,
+      "accuracy": 20,
+      "country": "FRA",
+      "region": "OCC",
+      "metro": "0",
+      "city": "Azillanet",
+      "utcoffset": 3600
+    },
+    "ext": {
+      "consent": "BOu923LOu924gAHABBFRC--AAAAuhr_7__7-_9_-_f__9uj3Or_v_f__30ccL59v_B_zv-_7fi_20jV4u_1vft9yfk1-5ctDztp507iakivXmqdeb9v_nz3_5pxP78k89r7337Ew_v8_v8b7BCIJAAAAAA"
+    }
+  },
+  "at": 1,
+  "tmax": 100,
+  "wseat": [
+    "1"
+  ],
+  "wlang": [
+    "fr"
+  ],
+  "cur": [
+    "EUR"
+  ],
+  "bcat": [
+    "IAB26",
+    "IAB25",
+    "IAB24",
+    "IAB23",
+    "IAB14-3",
+    "IAB13-2"
+  ],
+  "source": {
+    "fd": 1
+  },
+  "regs": {
+    "ext": {
+      "gdpr": 1
+    }
+  },
+  "pmp": {
+    "private_auction": 1
+  }
 }
+
 ```
 
 ## Any Questions
